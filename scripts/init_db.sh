@@ -41,7 +41,7 @@ fi
 
 export PGPASSWORD="${DB_PASSWORD}"
 until psql -h "localhost" -U "${DB_USER}" -p "${DB_PORT}" -d "postgres" -c '\q'; do
-    >&2 echo "Postgress is still unavailable - sleeping"
+    >&2 echo "Postgres is still unavailable - sleeping"
     sleep 1
 done
 
